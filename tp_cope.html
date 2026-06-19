@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use our Chatbot!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0b0b46;
+      background-image: url("GroupTax_Background_chatbot.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #a5f3fc;
+      height: 95vh; /* slightly less than full height */
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    .headline {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .bottom-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      color: #00bfff;
+      margin-bottom: 60px; /* lift slightly upward */
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 2.5rem;
+      }
+      .bottom-text {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="headline">Use our chatbot!</div>
+    <div class="bottom-text">
+      Press the blue icon <span class="arrow">➡️</span>
+    </div>
+  </div>
+
+  <!-- Boost.ai Chatbot Script -->
+  <script src="https://tss.boost.ai/chatPanel/chatPanel.js"></script>
+  <script>
+    var boost = window.boostInit("tss", {
+      chatPanel: {
+        header: {
+          filters: {
+            filterValues: ["finance"]
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+ 
